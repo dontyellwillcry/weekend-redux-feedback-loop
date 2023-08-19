@@ -7,8 +7,11 @@ import { createStore, combineReducers, applyMiddleware } from "redux";
 import logger from "redux-logger";
 
 const feedback = (state = [], action) => {
-  if (action.type === "ADD_FEEBACK") {
+  if (action.type === "ADD_FEEDBACK") {
     return [...state, action.payload];
+  }
+  if (action.type === "REMOVE_FEEDBACK") {
+    return [];
   }
   return state;
 };
