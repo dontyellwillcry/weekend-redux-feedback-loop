@@ -6,6 +6,8 @@ import CommentsInput from '../CommentsInput/CommentsInput';
 import SupportInput from '../SupportInput/SupportInput';
 import UnderstandingInput from '../UnderstandingInput/UnderstandingInput';
 import FeelingInput from '../FeelingInput/FeelingInput';
+import ReviewFeedback from '../ReviewFeedback/ReviewFeedback';
+import SuccessPage from '../SuccessPage/SuccessPage';
 
 function App() {
 
@@ -17,12 +19,14 @@ function App() {
       </header>
       <Router>
         <div>
-          {/* <ul className="nav">
+          <ul className="nav">
             <li><Link to="/">Feelings</Link></li>
             <li><Link to="/understanding">Understanding</Link></li>  
             <li><Link to="/supported">Supported</Link></li>
             <li><Link to="/comments">Comments</Link></li>
-          </ul> */}
+            <li><Link to="/review">review</Link></li>
+
+          </ul>
           
           <Route exact path="/">
             <FeelingInput />
@@ -35,6 +39,12 @@ function App() {
           </Route>
           <Route exact path="/comments">
             <CommentsInput />
+          </Route>
+          <Route exact path="/review">
+            <ReviewFeedback />
+          </Route>
+          <Route exact path="/success">
+            <SuccessPage />
           </Route>
         </div>
       </Router>

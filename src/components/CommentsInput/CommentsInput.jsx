@@ -18,7 +18,7 @@ function CommentsInput() {
             payload:addInput
 
         })
-        history.push("/");
+        history.push("/review");
 
     }
 
@@ -26,7 +26,7 @@ function CommentsInput() {
     <h1>Any comments you want to leave?</h1>
     <form onSubmit={(event) => handleNext(event)}>
       <label>Comments?</label>
-      <input type="text" placeholder='comments'required onChange={(event) => setAddInput(event.target.value)}/>
+      <input type="text" placeholder='comments' onChange={(event) => setAddInput(event.target.value)}/>
 
       
 
