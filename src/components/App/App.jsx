@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { HashRouter as Router, Route, Link } from "react-router-dom";
 import './App.css';
 import CommentsInput from '../CommentsInput/CommentsInput';
 import SupportInput from '../SupportInput/SupportInput';
@@ -16,25 +17,25 @@ function App() {
       </header>
       <Router>
         <div>
-          <ul className="nav">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/form">Customer Info</Link></li>  
-            <Link to="/checkout">Checkout</Link>
-            <Link to="/admin"></Link>
-          </ul>
+          {/* <ul className="nav">
+            <li><Link to="/">Feelings</Link></li>
+            <li><Link to="/understanding">Understanding</Link></li>  
+            <li><Link to="/supported">Supported</Link></li>
+            <li><Link to="/comments">Comments</Link></li>
+          </ul> */}
           
           <Route exact path="/">
-            <Home />
+            <FeelingInput />
           </Route>
-          <Route exact path="/form">
-            <CustomerForm />
+          <Route exact path="/understanding">
+            <UnderstandingInput />
           </Route>
-          <Route exact path="/checkout">
-            <Checkout />
+          <Route exact path="/supported">
+            <SupportInput />
           </Route>
-          {/* <Route exact path="/admin">
-            <Admin />
-          </Route> */}
+          <Route exact path="/comments">
+            <CommentsInput />
+          </Route>
         </div>
       </Router>
     </div>
