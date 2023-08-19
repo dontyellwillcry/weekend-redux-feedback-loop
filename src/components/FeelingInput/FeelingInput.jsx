@@ -19,7 +19,7 @@ function FeelingInput() {
         console.log('inside handleNext')
         dispatch({
             type:"ADD_FEEBACK",
-            payload:addInput
+            payload: addInput
 
         })
 
@@ -31,7 +31,7 @@ function FeelingInput() {
     <h1>How are you feeling today?</h1>
     <form onSubmit={(event) => handleNext(event)}>
       <label>Feeling?</label>
-      <input type="text" placeholder='1-5'required onChange={setAddInput}/>
+      <input type="text" placeholder='1-5'required onChange={(event) => setAddInput(event.target.value)}/>
 
       
 

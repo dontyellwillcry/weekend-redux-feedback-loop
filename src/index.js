@@ -10,15 +10,6 @@ const feedback = (state = [], action) => {
   if (action.type === "ADD_FEEBACK") {
     return [...state, action.payload];
   }
-
-  if (action.type === "ADD_FEEBACK") {
-    const removePizza = state.filter((pizza) => pizza.id !== action.payload.id);
-    return removePizza;
-  }
-
-  if (action.type === "REMOVE_FEEBACK") {
-    return [];
-  }
   return state;
 };
 
