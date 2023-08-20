@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 import axios from "axios";
 import { HashRouter as Router, Route, Link } from "react-router-dom";
-
+import Button from "@mui/material/Button";
 
 function ReviewFeedback() {
   const feedback = useSelector((store) => store.feedback);
@@ -17,7 +17,7 @@ function ReviewFeedback() {
     comments: feedback[3],
     flagged: false,
     // date: "01-01-2023"
-  }
+  };
 
   function handleNext(event) {
     event.preventDefault();
@@ -47,13 +47,13 @@ function ReviewFeedback() {
         <li>Support: {feedback[2]}</li>
         <li>Comments: {feedback[3]}</li>
       </ul>
-      
-      <button type="submit" onClick={handleNext}>
+
+      <Button type="submit" onClick={handleNext}>
         SUBMIT
-      </button>
-      <button type="submit" onClick={handlePrevious}>
+      </Button>
+      <Button type="submit" onClick={handlePrevious}>
         PREVIOUS
-      </button>
+      </Button>
     </>
   );
 }

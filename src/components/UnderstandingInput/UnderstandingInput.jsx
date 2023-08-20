@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import Button from "@mui/material/Button";
 
 function UnderstandingInput() {
   const history = useHistory();
@@ -34,11 +35,11 @@ function UnderstandingInput() {
           onChange={(event) => setAddInput(event.target.value)}
         />
 
-        <button type="submit">NEXT</button>
+        <Button type="submit">NEXT</Button>
       </form>
-      <button type="submit" onClick={handlePrevious}>
+      <Button type="submit" onClick={handlePrevious}>
         PREVIOUS
-      </button>
+      </Button>
     </>
   );
 }
