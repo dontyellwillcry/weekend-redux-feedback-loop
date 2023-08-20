@@ -3,6 +3,8 @@ import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import Button from "@mui/material/Button";
 
+// Again, much of the same. This component does not have the required keyword like the previous components did.
+// Also includes the previous button.
 function CommentsInput() {
   const history = useHistory();
   const dispatch = useDispatch();

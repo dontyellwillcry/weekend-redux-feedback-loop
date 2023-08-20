@@ -3,6 +3,8 @@ import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import Button from "@mui/material/Button";
 
+// Another component that is the same as the previous two except for the dispatch and paths
+// also includes the previous button.
 function SupportInput() {
   const history = useHistory();
   const dispatch = useDispatch();

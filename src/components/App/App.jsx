@@ -12,11 +12,14 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 
 const darkTheme = createTheme({
+  //Uses material UI to add a dark theme to the project.
   palette: {
     mode: "dark",
   },
 });
 
+//All of my component routes are set here with their corresponding path.
+// There are 6 paths in total.
 function App() {
   return (
     <ThemeProvider theme={darkTheme}>
