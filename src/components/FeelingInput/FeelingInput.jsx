@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+
 
 
 
@@ -9,6 +11,7 @@ import { useDispatch } from "react-redux";
 function FeelingInput() {
     const history = useHistory();
     const dispatch = useDispatch()
+    const feedback = useSelector((store) => store.feedback);
 
     const [addInput, setAddInput] = useState('');
 
