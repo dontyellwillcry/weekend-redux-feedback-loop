@@ -19,14 +19,14 @@ function App() {
       </header>
       <Router>
         <div>
-          <ul className="nav">
+          {/* <ul className="nav">
             <li><Link to="/">Feelings</Link></li>
             <li><Link to="/understanding">Understanding</Link></li>  
             <li><Link to="/supported">Supported</Link></li>
             <li><Link to="/comments">Comments</Link></li>
             <li><Link to="/review">review</Link></li>
 
-          </ul>
+          </ul> */}
           
           <Route exact path="/">
             <FeelingInput />
