@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 import axios from "axios";
-// import { HashRouter as Router, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Route, Link } from "react-router-dom";
 
 
 function ReviewFeedback() {
@@ -34,6 +34,10 @@ function ReviewFeedback() {
     history.push("/success");
   }
 
+  function handlePrevious() {
+    history.push("/comments");
+  }
+
   return (
     <>
       <h1> Review </h1>
@@ -43,16 +47,12 @@ function ReviewFeedback() {
         <li>Support: {feedback[2]}</li>
         <li>Comments: {feedback[3]}</li>
       </ul>
-      {/* <ul className="nav">
-            <li><Link to="/">Feelings: {feedback[0]}</Link></li>
-            <li><Link to="/understanding">Understanding: {feedback[1]}</Link></li>  
-            <li><Link to="/supported">Support: {feedback[2]}</Link></li>
-            <li><Link to="/comments">Comments: {feedback[3]}</Link></li>
-            
-
-          </ul> */}
+      
       <button type="submit" onClick={handleNext}>
         SUBMIT
+      </button>
+      <button type="submit" onClick={handlePrevious}>
+        PREVIOUS
       </button>
     </>
   );

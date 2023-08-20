@@ -21,7 +21,7 @@ function FeelingInput() {
         event.preventDefault();
         console.log('inside handleNext')
         dispatch({
-            type:"ADD_FEEDBACK",
+            type:"ADD_FEELING",
             payload: addInput
 
         })

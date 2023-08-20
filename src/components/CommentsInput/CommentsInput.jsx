@@ -14,13 +14,17 @@ function CommentsInput() {
         event.preventDefault();
         console.log('inside handleNext')
         dispatch({
-            type:"ADD_FEEDBACK",
+            type:"ADD_COMMENTS",
             payload:addInput
 
         })
         history.push("/review");
 
     }
+
+    function handlePrevious() {
+        history.push("/supported");
+      }
 
     return (<>
     <h1>Any comments you want to leave?</h1>
@@ -32,6 +36,9 @@ function CommentsInput() {
 
       <button type="submit">NEXT</button>
     </form>
+    <button type="submit" onClick={handlePrevious}>
+        PREVIOUS
+      </button>
     </>)
 }
 

@@ -14,13 +14,17 @@ function SupportInput() {
         event.preventDefault();
         console.log('inside handleNext')
         dispatch({
-            type:"ADD_FEEDBACK",
+            type:"ADD_SUPPORT",
             payload:addInput
 
         })
         history.push("/comments");
 
     }
+
+    function handlePrevious() {
+        history.push("/understanding");
+      }
 
     return (<>
     <h1>How well are you being supported?</h1>
@@ -32,7 +36,11 @@ function SupportInput() {
 
       <button type="submit">NEXT</button>
     </form>
-    </>)
+    <button type="submit" onClick={handlePrevious}>
+        PREVIOUS
+      </button>
+    </>
+    )
 }
 
 
