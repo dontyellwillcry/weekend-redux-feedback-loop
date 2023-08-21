@@ -37,10 +37,11 @@ Please make sure you have these dependencies installed before running the app.
 1. Clone this repository to your local machine.
 2. Navigate to the project directory using your terminal.
 3. Install the required dependencies using your preferred package manager:
-   ```bash
+   ```
    npm install
    ```
 4. Start the development server:
+   ```
    npm run client
    npm run server
    ```
