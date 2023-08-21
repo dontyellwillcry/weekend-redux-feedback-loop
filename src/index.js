@@ -10,7 +10,7 @@ import logger from "redux-logger";
 // Each compoenet, that has an input, will target a specific action type.
 // The switch statement and the .slice method lets the value change for any index.
 // This might not be the best thing. I'm creating new arrays each time a action is called.
-// But this lets me maintain the other indecies in thier original spots.
+// But this lets me maintain the other indices in theirr original spots.
 // but i didnt not want to have 4 different reducers and clutter up the index.js
 // There is also a action to return an empty array so the previous input will not show.
 const feedback = (state = [], action) => {
