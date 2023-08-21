@@ -1,6 +1,5 @@
 # Feedback App README
 
-Welcome to the Feedback App! This simple application allows users to provide feedback on their experience, understanding, support, and leave comments. The app consists of several components where users can input their feelings, review their inputs, and view a success page. Here's a quick guide to get you started.
 
 ## Table of Contents
 - [Introduction](#introduction)
